@@ -107,6 +107,9 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 # chmod 400 "$final_path/some_config_file"
 # chown $app:$app "$final_path/some_config_file"
 
+
+/usr/bin/php8.0' 'bin/cli' 'visit:download-db
+
 #=================================================
 # GENERIC FINALIZATION
 #=================================================
