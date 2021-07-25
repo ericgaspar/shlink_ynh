@@ -40,8 +40,8 @@
             {
                 "name": "path",
                 "type": "path",
-                "example": "/example",
-                "default": "/example"
+                "example": "/shlink",
+                "default": "/shlink"
             },
             {
                 "name": "is_public",
