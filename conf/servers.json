@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Main server",
+    "url": "https://doma.in",
+    "apiKey": "09c972b7-506b-49f1-a19a-d729e22e599c"
+  },
+  {
+    "name": "Local",
+    "url": "http://localhost:8080",
+    "apiKey": "580d0b42-4dea-419a-96bf-6c876b901451"
+  }
+]
