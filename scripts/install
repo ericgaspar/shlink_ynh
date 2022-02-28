@@ -27,6 +27,7 @@ ynh_abort_if_errors
 domain=$YNH_APP_ARG_DOMAIN
 path_url="/"
 is_public=$YNH_APP_ARG_IS_PUBLIC
+key=$(ynh_string_random --length=36)
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -82,8 +83,9 @@ ynh_script_progression --message="Setting up source files..." --weight=2
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$final_path" --source_id="front"
 ynh_setup_source --dest_dir="$final_path"
+
+ynh_setup_source --dest_dir="$final_path" --source_id="front"
 
 chmod 750 "$final_path"
 chmod -R o-rwx "$final_path"
@@ -115,8 +117,7 @@ ynh_add_config --template="../conf/.env-sample" --destination="$final_path/.env"
 chmod 400 "$final_path/.env"
 chown $app:$app "$final_path/.env"
 
-
-sudo -u www-data php7.4 /var/www/shlink/html/bin/cli api-key:generate
+#php$phpversion /var/www/shlink/html/bin/cli api-key:generate
 
 #=================================================
 # SETUP SSOWAT
