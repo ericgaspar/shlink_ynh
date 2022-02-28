@@ -1,7 +1,6 @@
 SOURCE_URL=https://github.com/shlinkio/shlink-web-client/releases/download/v3.5.1/shlink-web-client_3.5.1_dist.zip
-SOURCE_SUM=
+SOURCE_SUM=3f1c1ef3a4edec1c8701f023cbc005f70650d224079a73d8e97acc4c9ee21db7
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
 SOURCE_EXTRACT=true
