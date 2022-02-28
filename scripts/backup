@@ -32,7 +32,6 @@ final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 domain=$(ynh_app_setting_get --app=$app --key=domain)
 db_name=$(ynh_app_setting_get --app=$app --key=db_name)
 phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
-datadir=$(ynh_app_setting_get --app=$app --key=datadir)
 
 #=================================================
 # DECLARE DATA AND CONF FILES TO BACKUP
@@ -68,9 +67,9 @@ ynh_backup --src_path="/etc/logrotate.d/$app"
 #=================================================
 # BACKUP THE MYSQL DATABASE
 #=================================================
-ynh_print_info --message="Backing up the MySQL database..."
+ynh_print_info --message="Backing up the PostgreSQL database..."
 
-ynh_mysql_dump_db --database="$db_name" > db.sql
+ynh_psql_dump_db --database="$db_name" > db.sql
 
 #=================================================
 # END OF SCRIPT
