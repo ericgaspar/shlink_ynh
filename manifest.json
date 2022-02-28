@@ -12,7 +12,6 @@
         "license": "MIT",
         "website": "https://shlink.io/",
         "demo": "https://demo.example.com",
-        "admindoc": "https://yunohost.org/packaging_apps",
         "userdoc": "https://shlink.io/documentation/",
         "code": "https://github.com/shlinkio/shlink"
     },
