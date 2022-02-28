@@ -89,26 +89,6 @@ ynh_script_progression --message="Upgrading PHP-FPM configuration..." --time --w
 ynh_add_fpm_config
 
 #=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-# ynh_script_progression --message="Updating a configuration file..." --time --weight=1
-
-# ynh_add_config --template="some_config_file" --destination="$final_path/some_config_file"
-
-# chmod 400 "$final_path/some_config_file"
-# chown $app:$app "$final_path/some_config_file"
-
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# SETUP LOGROTATE
-#=================================================
-ynh_script_progression --message="Upgrading logrotate configuration..." --time --weight=1
-
-# Use logrotate to manage app-specific logfile(s)
-ynh_use_logrotate --non-append
-
-#=================================================
 # RELOAD NGINX
 #=================================================
 ynh_script_progression --message="Reloading NGINX web server..." --time --weight=1
