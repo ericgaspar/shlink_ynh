@@ -113,7 +113,7 @@ ynh_add_fpm_config
 ynh_script_progression --message="Adding a configuration file..." --weight=2
 
 ynh_add_config --template="../conf/.env-sample" --destination="$final_path/.env"
-ynh_add_config --template="../conf/servers.json" --destination="$final_path/servers.json"
+#ynh_add_config --template="../conf/servers.json" --destination="$final_path/servers.json"
 
 chmod 400 "$final_path/.env"
 chown $app:$app "$final_path/.env"
