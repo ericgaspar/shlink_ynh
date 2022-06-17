@@ -119,7 +119,9 @@ ynh_add_config --template="../conf/servers.json" --destination="$final_path/serv
 chmod 400 "$final_path/.env"
 chown $app:$app "$final_path/.env"
 
-php$phpversion /var/www/shlink/html/bin/cli api-key:generate
+pushd "$final_path"
+	bin/cli api-key:generate --author-only --domain-only=$domain
+popd
 
 #=================================================
 # SETUP SSOWAT
