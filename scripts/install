@@ -120,7 +120,7 @@ chmod 400 "$final_path/.env"
 chown $app:$app "$final_path/.env"
 
 pushd "$final_path"
-	bin/cli api-key:generate --author-only --domain-only=$domain
+	php$phpversion bin/cli api-key:generate --author-only --domain-only=$domain
 popd
 
 #=================================================
